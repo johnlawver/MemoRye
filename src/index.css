@@ -1,3 +1,16 @@
+:root {
+  --main-bg-color: #282c34;
+  --hover-shadow: #ccc;
+
+  /* Card Colors */
+  /* highlighter */
+  --red: #ff5994;
+  --orange: #ff9668;
+  --yellow: #edff8f;
+  --green:#84ff9f ;
+  --blue: #82b6ff ;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,12 +22,12 @@ body {
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   /* font-size: calc(10px + 2vmin); */
   color: white;
 }
@@ -25,7 +38,7 @@ nav {
   justify-content: space-around;
   padding: .5rem;
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   position: fixed;
   width: calc(100% - 2rem);
   max-width: 600px;
@@ -49,8 +62,74 @@ nav > button {
 }
 
 nav > button:hover {
-  background-color: #ccc;
+  background-color: var(--hover-shadow);
   font-size: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 15rem);
+  margin: 1rem;
+  border-radius: 3rem;
+  width:90vw;
+  max-width:400px;
+  color: var(--main-bg-color);
+}
+
+.card > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30vh;
+  flex: 1;
+  background-color: white;
+  border-radius: 2.8rem;
+}
+
+.card > h1 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.card > h1.red {
+  background-color: var(--red);
+}
+.card.red {
+  border: 1rem solid var(--red);
+  background-color: var(--red);
+}
+
+.card > h1.orange {
+  background-color: var(--orange);
+}
+.card.orange {
+  border: 1rem solid var(--orange);
+  background-color: var(--orange);
+}
+
+.card > h1.yellow {
+  background-color: var(--yellow);
+}
+.card.yellow {
+  border: 1rem solid var(--yellow);
+  background-color: var(--yellow);
+}
+
+.card > h1.green {
+  background-color: var(--green);
+}
+.card.green {
+  border: 1rem solid var(--green);
+  background-color: var(--green);
+}
+
+.card > h1.blue {
+  background-color: var(--blue);
+}
+.card.blue {
+  border: 1rem solid var(--blue);
+  background-color: var(--blue);
 }
 
 code {

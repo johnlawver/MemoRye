@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
+import Card from "./components/Card";
 
 function App() {
   return (
     <div className="App">
-      card
+      <Card icon={"🐶"} name="Dog" set="Animals" color="blue" />
       <Navbar />
     </div>
   );
