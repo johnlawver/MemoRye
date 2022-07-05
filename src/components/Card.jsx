@@ -1,14 +1,9 @@
-import { say } from "../utils";
-
-const Card = ({ color, name, icon, set }) => {
-  const handleClick = (e) => {
-    say(e.target.id);
-  };
+const Card = ({ color, name, icon, set, click }) => {
   return (
     <div
       className={`card ${color}`}
       key={`${set}-${name}`}
-      onClick={handleClick}
+      onClick={click}
       id={name}
     >
       <span id={name} role="img" aria-label={name}>
