@@ -22,6 +22,11 @@ const Navbar = () => {
           🌈
         </span>
       </button>
+      <button id="food" onClick={handleClick}>
+        <span id="food" role="img" aria-label="Food">
+          🍌
+        </span>
+      </button>
       <button id="trucks" onClick={handleClick}>
         <span id="trucks" role="img" aria-label="Trucks">
           🚛
