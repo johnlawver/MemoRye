@@ -1,9 +1,6 @@
-import React from "react";
-import { say } from "../utils";
-
-const Navbar = () => {
+const Navbar = ({ setDecks }) => {
   const handleClick = (e) => {
-    say(e.target.id);
+    setDecks(e.target.id);
   };
   return (
     <nav>

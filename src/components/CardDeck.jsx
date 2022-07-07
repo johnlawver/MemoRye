@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import { cards } from "../josn/cards";
 import { randomChoice, say } from "../utils";
-import Card from ".//Card";
+import Card from "./Card";
+const colors = ["red", "orange", "yellow", "green", "blue"];
 
-const CardDeck = () => {
-  const [activeCard, setActiveCard] = useState(randomChoice(cards));
+const CardDeck = ({ decks }) => {
+  const [activeCard, setActiveCard] = useState(randomChoice(decks));
 
-  const handleCardSwap = () => {
-    setActiveCard(randomChoice(cards));
+  const handleCardSwap = (e) => {
+    speechSynthesis.cancel();
+    setActiveCard(randomChoice(decks));
   };
+  useEffect(() => {
+    setActiveCard(randomChoice(decks));
+  }, [decks]);
 
   useEffect(() => {
     say(activeCard.name);
@@ -18,7 +22,7 @@ const CardDeck = () => {
       icon={activeCard.icon}
       name={activeCard.name}
       set={activeCard.set}
-      color="blue"
+      color={randomChoice(colors)}
       click={handleCardSwap}
     />
   );
