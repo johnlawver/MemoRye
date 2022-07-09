@@ -68,6 +68,7 @@ nav > button:hover {
 
 .card {
   display: flex;
+  position: relative;
   flex-direction: column;
   height: calc(100vh - 15rem);
   margin: 1rem;
@@ -130,6 +131,22 @@ nav > button:hover {
 .card.blue {
   border: 1rem solid var(--blue);
   background-color: var(--blue);
+}
+
+.card > .replay-button, .settings {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: 1rem;
+  right:1rem;
+  font-size: 3rem;
+  background-color: var(--main-bg-color);
+  border: none;
 }
 
 code {
