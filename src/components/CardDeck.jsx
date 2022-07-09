@@ -10,6 +10,12 @@ const CardDeck = ({ decks }) => {
     speechSynthesis.cancel();
     setActiveCard(randomChoice(decks));
   };
+
+  const replaySound = (e) => {
+    e.stopPropagation();
+    speechSynthesis.cancel();
+    say(activeCard.name);
+  };
   useEffect(() => {
     setActiveCard(randomChoice(decks));
   }, [decks]);
@@ -24,6 +30,7 @@ const CardDeck = ({ decks }) => {
       set={activeCard.set}
       color={randomChoice(colors)}
       click={handleCardSwap}
+      replaySound={replaySound}
     />
   );
 };

@@ -1,4 +1,4 @@
-const Card = ({ color, name, icon, set, click }) => {
+const Card = ({ color, name, icon, set, click, replaySound }) => {
   return (
     <div
       className={`card ${color}`}
@@ -6,6 +6,11 @@ const Card = ({ color, name, icon, set, click }) => {
       onClick={click}
       id={name}
     >
+      <button className="replay-button" onClick={replaySound}>
+        <span role="img" aria-label="Replay Sound">
+          🔊
+        </span>
+      </button>
       <span id={name} role="img" aria-label={name}>
         {icon}
       </span>
