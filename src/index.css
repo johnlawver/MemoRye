@@ -7,17 +7,18 @@
   --red: #ff5994;
   --orange: #ff9668;
   --yellow: #edff8f;
-  --green:#84ff9f ;
-  --blue: #82b6ff ;
+  --green: #84ff9f;
+  --blue: #82b6ff;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: none;
 }
 
 .App {
@@ -36,14 +37,14 @@ nav {
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  padding: .5rem;
+  padding: 0.5rem;
   align-items: center;
   background-color: white;
   position: fixed;
   width: calc(100% - 2rem);
   max-width: 600px;
   bottom: 0;
-  right:0;
+  right: 0;
   margin: 1rem;
   border-radius: 3rem;
 }
@@ -73,9 +74,10 @@ nav > button:hover {
   height: calc(100vh - 15rem);
   margin: 1rem;
   border-radius: 3rem;
-  width:90vw;
-  max-width:400px;
+  width: 90vw;
+  max-width: 400px;
   color: var(--main-bg-color);
+  touch-action: none;
 }
 
 .card > span {
@@ -133,7 +135,8 @@ nav > button:hover {
   background-color: var(--blue);
 }
 
-.card > .replay-button, .settings {
+.card > .replay-button,
+.settings {
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -143,13 +146,13 @@ nav > button:hover {
   width: 4rem;
   position: absolute;
   top: 1rem;
-  right:1rem;
+  right: 1rem;
   font-size: 3rem;
   background-color: var(--main-bg-color);
   border: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
